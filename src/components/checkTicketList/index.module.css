@@ -1,0 +1,95 @@
+.ticketList {
+  margin-top: 1.5rem;
+}
+.ticketItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  align-items: center;
+}
+.ticketItem span,
+.ticketItem strong {
+  display: block;
+  flex: 1;
+  font-size: 14px;
+}
+
+.no {
+  max-width: 60px;
+}
+.ticketItemHead {
+  background-color: #f1f4f8;
+}
+.ticketItem:nth-child(odd) {
+  background-color: #f7f8fb;
+}
+.statusWrapper {
+  color: #fff;
+  background-color: #eaf1f8;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: #919dba;
+  display: flex;
+  gap: 0.8rem;
+  width: 150px;
+  align-items: center;
+  font-size: 14px;
+  border: 1px solid #919dba;
+}
+.statusWrapper .dot {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #919dba;
+  border-radius: 10px !important;
+}
+.statusWrapper.notUsed {
+  background-color: rgba(222, 247, 224, 1);
+  border-color: #03ac00;
+  color: rgba(3, 172, 0, 1);
+}
+.statusWrapper.notUsed .dot {
+  background-color: #03ac00;
+}
+
+.statusWrapper.expired {
+  background-color: rgba(248, 235, 232, 1);
+  border-color: #fd5959;
+  color: #fd5959;
+}
+.statusWrapper.expired .dot {
+  background-color: #fd5959;
+}
+.check.isChecked {
+  color: #03ac00;
+}
+.check {
+  color: #fd5959;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.checkBtn {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid rgba(255, 153, 60, 1);
+  border-radius: 8px;
+  color: rgba(255, 153, 60, 1);
+  background-color: #fff;
+  cursor: pointer;
+  gap: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1250px) {
+  .ticketItem span,
+  .ticketItem strong {
+    font-size: 12px;
+  }
+  .statusWrapper {
+    font-size: 12px;
+  }
+}

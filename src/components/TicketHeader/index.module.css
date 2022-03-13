@@ -1,0 +1,53 @@
+.form {
+  background-color: #f7f7f8;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  border-radius: 8px;
+}
+.form input,
+.form button {
+  background: none;
+  border: none;
+}
+.form input {
+  font-size: 16px;
+  padding: 0.8rem 0.5rem;
+  color: #444;
+  min-width: 250px;
+}
+.form button {
+  cursor: pointer;
+}
+.ticketHeader {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.buttons button {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 153, 60, 1);
+  border-radius: 8px;
+  color: rgba(255, 153, 60, 1);
+  background-color: #fff;
+  cursor: pointer;
+  gap: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.buttons button:hover {
+  background-color: rgba(255, 153, 60, 0.1);
+}
+@media (max-width: 650px) {
+  .ticketHeader {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

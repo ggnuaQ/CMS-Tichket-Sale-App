@@ -1,0 +1,224 @@
+.panel {
+  position: fixed;
+  left: calc(50% - 300px);
+  top: 5rem;
+  min-width: 600px;
+  background-color: #fff;
+  z-index: 100;
+  padding: 1.6rem;
+  border: 1px solid #ff9a3c49;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-200%);
+}
+.panel.show {
+  transform: translateX(0);
+}
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.date {
+  position: relative;
+}
+.calendar {
+  position: absolute;
+  left: 0;
+  z-index: 50;
+}
+.dateOutput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+.dateOutput button {
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+.panelHeader button {
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+.dateRow {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* The container */
+.radioContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radioContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radioContainer:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radioContainer input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radioContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radioContainer .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+}
+.statusRadios {
+  margin-top: 1.5rem;
+}
+.portRow {
+  margin-top: 1.5rem;
+}
+
+/* The container */
+.checkboxContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmarkCheckbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkboxContainer:hover input ~ .checkmarkCheckbox {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkboxContainer input:checked ~ .checkmarkCheckbox {
+  background-color: #2196f3;
+}
+
+/* Create the checkmarkCheckbox/indicator (hidden when not checked) */
+.checkmarkCheckbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmarkCheckbox when checked */
+.checkboxContainer input:checked ~ .checkmarkCheckbox:after {
+  display: block;
+}
+
+/* Style the checkmarkCheckbox/indicator */
+.checkboxContainer .checkmarkCheckbox:after {
+  left: 6px;
+  top: 3px;
+  width: 4px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.portOptions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 1.5rem;
+  gap: 1.5rem;
+}
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.buttonRow button {
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 153, 60, 1);
+  border-radius: 8px;
+  color: rgba(255, 153, 60, 1);
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+  text-align: center;
+  width: 150px;
+}
+.buttonRow button:hover {
+  background-color: rgba(255, 153, 60, 0.1);
+}

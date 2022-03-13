@@ -1,0 +1,7 @@
+.checkTicketMainWrapper {
+  display: flex;
+  gap: 1.5rem;
+}
+.list {
+  flex: 1;
+}

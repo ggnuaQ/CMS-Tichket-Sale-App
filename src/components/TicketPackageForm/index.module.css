@@ -1,0 +1,136 @@
+.panel {
+  position: fixed;
+  left: calc(50% - 300px);
+  top: 5rem;
+  background-color: #fff;
+  z-index: 100;
+  padding: 1.6rem;
+  border: 1px solid #ff9a3c49;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-200%);
+  min-width: 600px;
+  border-radius: 5px;
+}
+.panel.show {
+  transform: translateY(0);
+}
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.date {
+  position: relative;
+  width: 100%;
+}
+.calendar {
+  position: absolute;
+  left: 0;
+  z-index: 50;
+}
+.dateOutput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+.dateOutput button {
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+.panelHeader button {
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+.dateRow {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.buttonRow button {
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 153, 60, 1);
+  border-radius: 8px;
+  color: rgba(255, 153, 60, 1);
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+  text-align: center;
+  width: 150px;
+}
+.buttonRow button:hover {
+  background-color: rgba(255, 153, 60, 0.1);
+}
+
+.row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.col {
+  width: 100%;
+}
+
+.formGroup label,
+.formGroup input,
+.select {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup input,
+.select {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+.colFull {
+  margin-top: 1rem;
+}
+.colFull input {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 0 1rem;
+}
+.statusRow {
+  margin-top: 1.5rem;
+}
+.select {
+  max-width: 200px;
+  margin-top: 1rem;
+}
+
+@media (max-width: 625px) {
+  .panel {
+    left: 0;
+    width: 100%;
+    min-width: auto;
+  }
+}
